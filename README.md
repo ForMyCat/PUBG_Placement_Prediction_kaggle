@@ -15,7 +15,7 @@ https://www.kaggle.com/muhammedabdulazeem/pubg-full-eda-and-predication-differen
 Original DF len: 4446966 rows
 47965 unique matches, select 4796 matches, 445296 rows in total
 29 columns
-random sampling random_state=1, frac=0.1, to get 444697 rows
+stratified sampling for EDA random_state=1, frac=0.1, to get 444697 rows
 
 **Cheater Statistics:**
 https://www.reddit.com/r/PUBATTLEGROUNDS/comments/elo0vj/pubg_cheating_statistics/
@@ -29,6 +29,9 @@ world kill record:
 
 Assumption: Anyone with 20 kills to be a cheater
 
+**Selected Features for modeling:**
+Explanatory: 'walkDistance', 'killPlace'(neg), 'boosts', 'weaponsAcquired','damageDealt','heals','kills','longestKill', and 'killStreaks'.
+Target: 'winPlacePerc'
 
 **Feature Columns:**
 
@@ -65,7 +68,7 @@ matchId - ID to identify match. There are no matches that are in both the traini
 matchType - String identifying the game mode that the data comes from. The standard modes are “solo”, “duo”, “squad”, “solo-fpp”, “duo-fpp”, and “squad-fpp”; 
 other modes are from events or custom matches.
 
-rankPoints - Elo-like ranking of player. This ranking is inconsistent and is being deprecated in the API’s next version, so use with caution. Value of -1 takes 
+rankPoints (Deprecated) - Elo-like ranking of player. This ranking is inconsistent and is being deprecated in the API’s next version, so use with caution. Value of -1 takes 
 place of “None”.
 
 revives - Number of times this player revived teammates.
