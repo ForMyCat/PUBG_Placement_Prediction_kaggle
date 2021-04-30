@@ -1,5 +1,5 @@
 # PUBG_Placement_Prediction_kaggle
- This repo includes all my dataset and notebooks used for RPI 2021 Intro to Machine Learning class with professor Lydia Manikonda
+ This repo includes all my dataset and notebooks used for RPI 2021 Spring Intro to Machine Learning class with professor Lydia Manikonda
 
 Pubg Game Prediction
 Website: https://www.kaggle.com/c/pubg-finish-placement-prediction
