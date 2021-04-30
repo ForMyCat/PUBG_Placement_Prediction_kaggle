@@ -1,5 +1,5 @@
 # PUBG_Placement_Prediction_kaggle
- This repo includes all my dataset and notebooks used for RPI 2021 Intro to Machine Learning class with professor Lydia Manikonda
+ This repo includes all my dataset and notebooks used for RPI 2021 Spring Intro to Machine Learning class with professor Lydia Manikonda
 
 Pubg Game Prediction
 Website: https://www.kaggle.com/c/pubg-finish-placement-prediction
@@ -9,26 +9,31 @@ https://www.kaggle.com/mynextstep16/beginner-1st-model    XGB,LinearReg
 https://www.kaggle.com/hegab7/pubg-note       DecisionTree
 https://www.kaggle.com/muhammedabdulazeem/pubg-full-eda-and-predication-different-ml-models				Very Thorough EDA, CGB, RandomForest
 
-Cheater Statistics:
+
+
+**EDA Note:**
+Original DF len: 4446966 rows
+47965 unique matches, select 4796 matches, 445296 rows in total
+29 columns
+stratified sampling for EDA random_state=1, frac=0.1, to get 444697 rows
+
+**Cheater Statistics:**
 https://www.reddit.com/r/PUBATTLEGROUNDS/comments/elo0vj/pubg_cheating_statistics/
 cite:
 Essentially, I'm estimating that for a 90 person match, the probability that you're going to be playing against someone who IS getting banned that week is 91.4% (1.0 - (0.9731 ^ 90))
 
-EDA Note:
-Original DF len: 4446966 rows
-47965 unique matches, select 4796 matches, 445296 rows in total
-# of cols: 29
-random sampling random_state=1, frac=0.1, to get 444697 rows
-
-word record: 
+world kill record: 
 43 on AS server
 34 on EU
 26 on NA
 
 Assumption: Anyone with 20 kills to be a cheater
 
+**Selected Features for modeling:**
+Explanatory: 'walkDistance', 'killPlace'(neg), 'boosts', 'weaponsAcquired','damageDealt','heals','kills','longestKill', and 'killStreaks'.
+Target: 'winPlacePerc'
 
-Feature Columns:
+**Feature Columns:**
 
 DBNOs - Number of enemy players knocked.
 
@@ -63,7 +68,7 @@ matchId - ID to identify match. There are no matches that are in both the traini
 matchType - String identifying the game mode that the data comes from. The standard modes are “solo”, “duo”, “squad”, “solo-fpp”, “duo-fpp”, and “squad-fpp”; 
 other modes are from events or custom matches.
 
-rankPoints - Elo-like ranking of player. This ranking is inconsistent and is being deprecated in the API’s next version, so use with caution. Value of -1 takes 
+rankPoints (Deprecated) - Elo-like ranking of player. This ranking is inconsistent and is being deprecated in the API’s next version, so use with caution. Value of -1 takes 
 place of “None”.
 
 revives - Number of times this player revived teammates.
