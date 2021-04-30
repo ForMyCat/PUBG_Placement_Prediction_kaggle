@@ -9,18 +9,20 @@ https://www.kaggle.com/mynextstep16/beginner-1st-model    XGB,LinearReg
 https://www.kaggle.com/hegab7/pubg-note       DecisionTree
 https://www.kaggle.com/muhammedabdulazeem/pubg-full-eda-and-predication-different-ml-models				Very Thorough EDA, CGB, RandomForest
 
-Cheater Statistics:
+
+
+**EDA Note:**
+Original DF len: 4446966 rows
+47965 unique matches, select 4796 matches, 445296 rows in total
+29 columns
+random sampling random_state=1, frac=0.1, to get 444697 rows
+
+**Cheater Statistics:**
 https://www.reddit.com/r/PUBATTLEGROUNDS/comments/elo0vj/pubg_cheating_statistics/
 cite:
 Essentially, I'm estimating that for a 90 person match, the probability that you're going to be playing against someone who IS getting banned that week is 91.4% (1.0 - (0.9731 ^ 90))
 
-EDA Note:
-Original DF len: 4446966 rows
-47965 unique matches, select 4796 matches, 445296 rows in total
-# of cols: 29
-random sampling random_state=1, frac=0.1, to get 444697 rows
-
-word record: 
+world kill record: 
 43 on AS server
 34 on EU
 26 on NA
@@ -28,7 +30,7 @@ word record:
 Assumption: Anyone with 20 kills to be a cheater
 
 
-Feature Columns:
+**Feature Columns:**
 
 DBNOs - Number of enemy players knocked.
 
